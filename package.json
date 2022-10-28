@@ -13,6 +13,7 @@
     "dev:ci": "start-test web 19006 cy:run"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.13",
     "expo": "~41.0.1",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",

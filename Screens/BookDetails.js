@@ -77,6 +77,7 @@ const BookDetails = (props) => {
             style={{
               lineHeight: 25,
               fontSize: 17,
+              marginBottom: 20,
             }}
           >
             {data.description}

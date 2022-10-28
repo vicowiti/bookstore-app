@@ -16,7 +16,7 @@ const BookCard = ({ data }) => {
         style={{ width: "100%", height: undefined, aspectRatio: 1 }}
       />
       <Text
-        style={{ textAlign: "center", paddingHorizontal: 10, color: "white" }}
+        style={{ textAlign: "center", paddingHorizontal: 10, color: "black" }}
       >
         {data?.title}
       </Text>

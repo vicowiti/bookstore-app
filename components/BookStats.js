@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 
 const BookStats = ({ data }) => {
@@ -29,12 +29,13 @@ const BookStats = ({ data }) => {
           marginVertical: 5,
         }}
       >
-        <FontAwesome
-          name="sort-numeric-desc"
+        <AntDesign
+          name="exception1"
           size={24}
           color="black"
           style={{ paddingRight: 5 }}
         />
+
         <Text>ISBN - {data.isbn} </Text>
       </View>
       <View

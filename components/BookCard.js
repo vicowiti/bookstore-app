@@ -1,9 +1,15 @@
 import { View, Text, Image, Pressable } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const BookCard = ({ data }) => {
+  const navigation = useNavigation();
+
   return (
-    <Pressable style={{ width: "50%", marginVertical: 7 }}>
+    <Pressable
+      style={{ width: "50%", marginVertical: 7 }}
+      onPress={() => navigation.navigate("BookDetails", { data })}
+    >
       <Image
         resizeMode="contain"
         source={{ uri: data?.imgUrl }}

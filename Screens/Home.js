@@ -4,8 +4,10 @@ import { StatusBar } from "expo-status-bar";
 import { useApi } from "../hooks/useApi";
 import Loader from "../components/Loader";
 import BookCard from "../components/BookCard";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 
 const Home = () => {
+  const [showSearch, setShowSearch] = useState(false);
   const [query, setQuery] = useState("");
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -17,6 +19,9 @@ const Home = () => {
       book.title.toLowerCase().includes(query.toLowerCase())
     );
   }
+  const handleToggle = () => {
+    setShowSearch(!showSearch);
+  };
 
   useEffect(() => {
     const loadData = async () => {
@@ -32,25 +37,61 @@ const Home = () => {
     <View style={{ flex: 1 }}>
       <View
         style={{
-          height: 120,
+          height: showSearch ? 150 : 90,
           backgroundColor: "#269984",
         }}
       >
-        {/* <Image /> */}
-        <TextInput
-          placeholder="Search for book"
+        <View
           style={{
-            position: "absolute",
-            bottom: 5,
-
-            left: 12,
-            borderRadius: 50,
-            padding: 7,
-            width: "70%",
-            backgroundColor: "#98d6cb",
+            flexDirection: "row",
+            alignItems: "center",
+            width: "100%",
+            justifyContent: "space-between",
+            paddingRight: 20,
+            marginTop: 30,
           }}
-          onChangeText={setQuery}
-        />
+        >
+          <Image
+            source={require("../assets/logo.png")}
+            style={{ width: "30%", height: 40 }}
+            resizeMode="contain"
+          />
+          {showSearch ? (
+            <MaterialIcons
+              name="cancel"
+              size={24}
+              color="white"
+              onPress={handleToggle}
+            />
+          ) : (
+            <AntDesign
+              name="search1"
+              size={30}
+              color="white"
+              onPress={handleToggle}
+            />
+          )}
+        </View>
+        <View style={{ justifyContent: "center", alignItems: "center" }}>
+          {showSearch && (
+            <TextInput
+              placeholder="Search for book"
+              style={{
+                // position: "re",
+                padding: 10,
+                marginTop: 10,
+                justifyContent: "center",
+                alignItems: "center",
+                borderRadius: 10,
+                padding: 3,
+                width: "90%",
+                height: 50,
+                backgroundColor: "#fff",
+              }}
+              onChangeText={setQuery}
+            />
+          )}
+        </View>
       </View>
       <StatusBar />
       {isLoading && <Loader />}

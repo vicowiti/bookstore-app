@@ -1,4 +1,4 @@
-import { View, Text, Image, Pressable } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
@@ -6,7 +6,7 @@ const BookCard = ({ data }) => {
   const navigation = useNavigation();
 
   return (
-    <Pressable
+    <TouchableOpacity
       style={{ width: "50%", marginVertical: 7 }}
       onPress={() => navigation.navigate("BookDetails", { data })}
     >
@@ -20,7 +20,7 @@ const BookCard = ({ data }) => {
       >
         {data?.title}
       </Text>
-    </Pressable>
+    </TouchableOpacity>
   );
 };
 

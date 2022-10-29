@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/625d839d0d9841ac9a907da3b062424a)](https://www.codacy.com/gh/vicowiti/bookstore-app/dashboard?utm_source=github.com&utm_medium=referral&utm_content=vicowiti/bookstore-app&utm_campaign=Badge_Grade)
 
-### This app was build as an interview for Fudap's React Native developer - Intern Role.
+<p> This app was build as an interview for Fudap's React Native developer - Intern Role</p>
 
 ## To dos
 

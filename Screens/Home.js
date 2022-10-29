@@ -53,7 +53,7 @@ const Home = () => {
         >
           <Image
             source={require("../assets/logo.png")}
-            style={{ width: "30%", height: 40 }}
+            style={{ width: "30%", height: 65 }}
             resizeMode="contain"
           />
           {showSearch ? (
@@ -94,11 +94,14 @@ const Home = () => {
         </View>
       </View>
       <StatusBar />
-      {isLoading && <Loader />}
+      {isLoading && (
+        <Loader testID="loading" accessibilityLabel="App is loading books" />
+      )}
       <FlatList
+        accessibilityLabel="books"
         data={filteredData}
         key="_"
-        renderItem={({ item }) => <BookCard data={item} />}
+        renderItem={({ item }) => <BookCard testID="book" data={item} />}
         keyExtractor={(item) => "_" + item.id}
         showsVerticalScrollIndicator={false}
         numColumns={2}

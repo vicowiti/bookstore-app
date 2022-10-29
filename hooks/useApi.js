@@ -7,5 +7,5 @@ export const useApi = () => {
     return jsonData;
   };
 
-  return { getBooks };
+  return getBooks;
 };

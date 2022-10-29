@@ -11,7 +11,7 @@ const Home = () => {
   const [query, setQuery] = useState("");
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-  const { getBooks } = useApi();
+  const getBooks = useApi();
   let filteredData = data;
 
   if (query) {
@@ -37,7 +37,7 @@ const Home = () => {
     <View style={{ flex: 1 }}>
       <View
         style={{
-          height: showSearch ? 150 : 90,
+          height: showSearch ? 170 : 90,
           backgroundColor: "#269984",
         }}
       >

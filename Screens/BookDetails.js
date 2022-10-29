@@ -5,6 +5,7 @@ import {
   Image,
   ScrollView,
   SafeAreaView,
+  StyleSheet,
 } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
@@ -13,6 +14,7 @@ import BookStats from "../components/BookStats";
 const BookDetails = (props) => {
   const { navigation, route } = props;
   const data = route.params.data;
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View

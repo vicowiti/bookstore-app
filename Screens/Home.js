@@ -1,4 +1,4 @@
-import { View, Text, FlatList, TextInput, Image } from "react-native";
+import { View, FlatList, TextInput, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useApi } from "../hooks/useApi";

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import {  Text, View } from "react-native";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
@@ -59,4 +59,4 @@ const BookStats = ({ data }) => {
 
 export default BookStats;
 
-const styles = StyleSheet.create({});
+

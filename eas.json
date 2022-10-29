@@ -13,6 +13,11 @@
     "preview3": {
       "developmentClient": true
     },
-    "production": {}
+    "production": {
+      "distribution": "internal"
+    }
+  },
+  "cli": {
+    "version": ">= 0.53.0"
   }
 }

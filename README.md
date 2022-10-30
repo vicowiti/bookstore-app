@@ -12,3 +12,13 @@
 <li>Show a spinner while waiting for data.</li>
 <li>Have a book metadata page.</li>
 </ul>
+
+## ScreenShots
+
+<div>
+<img src="./assets/1.jpg" alt="launch" width="200" >
+<img src="./assets/2.jpg" alt="loading" width="200" >
+<img src="./assets/3.jpg" alt="homepage" width="200" >
+<img src="./assets/4.jpg" alt="book-details" width="200" >
+<img src="./assets/5.jpg" alt="search" width="200" >
+</div>
